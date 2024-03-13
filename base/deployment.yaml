@@ -13,7 +13,13 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: nginx:1.24.0-alpine
+        image: nginx:1.22.0-alpine
+        env:
+        - name: API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: myapp-env
+              key: API_KEY
         resources:
           limits:
             memory: "128Mi"

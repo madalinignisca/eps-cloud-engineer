@@ -1,4 +1,8 @@
 namespace: eps
+secretGenerator:
+- name: myapp-env
+  envs:
+  - .env.secret
 resources:
   - "namespace.yaml"
   - "deployment.yaml"
@@ -6,3 +10,5 @@ resources:
   - "hpa.yaml"
   - "pdb.yaml"
   - "serviceaccount.yaml"
+  - "role.yaml"
+  - "rolebinding.yaml"
