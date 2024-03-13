@@ -19,6 +19,7 @@
 - alternative environments, like testing, staging, production, should have separate directories with the overrides for each environment, at minimal values to make the difference for min/max of some parameters.
 - all secrets and configmaps should be passed by the CI/CD pipeline and not by being saved in this repository! alternative, secrets could be pulled from a specialized service with currect authentification.
 - code and documentation quality left for the reviewer.
+- see XNOTES.md for some personal notes
 
 ### Option 2
 
