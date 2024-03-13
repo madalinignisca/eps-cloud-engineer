@@ -29,6 +29,20 @@ spec:
             cpu: "250m"
         ports:
         - containerPort: 80
+        volumeMounts:
+        - name: myapp-cache
+          mountPath: /var/cache/nginx
+        - name: myapp-run
+          mountPath: /var/run
+        securityContext:
+          runAsUser: 1000
+          runAsGroup: 1000
+          allowPrivilegeEscalation: false
+      volumes:
+      - name: myapp-cache
+        emptyDir: {}
+      - name: myapp-run
+        emptyDir: {}
   strategy:
     type: RollingUpdate
     rollingUpdate:
