@@ -1,0 +1,8 @@
+namespace: eps
+resources:
+  - "namespace.yaml"
+  - "deployment.yaml"
+  - "service.yaml"
+  - "hpa.yaml"
+  - "pdb.yaml"
+  - "serviceaccount.yaml"
