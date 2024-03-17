@@ -9,4 +9,5 @@ variable "aws_kms_policy" {
 
 variable "app_api_key" {
   description = "The API key for the application"
+  sensitive = true
 }
